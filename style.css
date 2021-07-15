@@ -17,12 +17,43 @@ a {
 }
 
 form {
-	column-count:2;
+	/*column-count:2; */
 	/*column-width: 100px; */
-  width: 800px;
+  max-width: 1000px; 
 	margin: auto;
 	padding: 5px;
 	border: solid black 1px;
 	border-radius: 5px;
 	box-shadow: 5px 5px 2px #888;
+}
+
+
+#PageHead {
+  font-size: 22pt;
+  padding: 3px;
+}
+
+#PageTitle {
+  display: inline;
+}
+
+#PageSubTitle {
+  display: inline;
+  font-size: 16pt;
+  font-style: italic;
+  margin-left: 1em;
+}
+
+#PageNav {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 1px;
+  font-size: 10pt;
+  background: #F0F0F0;
+}
+
+#PageNav A {
+  text-decoration: none;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
