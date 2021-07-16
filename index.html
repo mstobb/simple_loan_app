@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
  <head>
+  <!-- <script type="text/javascript" src="script.js"></script> -->
   <title>Loan Track Online :: A simple, free online loan calculator</title>
   <link rel='stylesheet' href="style.css" type='text/css' />
   <meta name='author' content='Michael Stobb' />
@@ -18,28 +19,100 @@
   </div><br/>
 
 <body>
-      <form>
+      <form class="flex-container">
 
-        <div class="column">
-          Home Price: <input type="text" id="home_price" value="">
+        <div class="main-flex">
+
+        <div class="flex-item">
+          Loan Type:<br/>
+          <input type="radio" id="loan_type_conv" name="loan_type" value="conv" checked>
+          <label for="loan_type_conv">Conventional</label>
+          <input type="radio" id="loan_type_fha" name="loan_type" value="fha">
+          <label for="loan_type_fha">FHA</label>
+        </div>
+        <div class="flex-item">
+          Home Price: <input type="number" id="home_price" value="">
+        </div>
+        <div class="flex-item">
+          Loan Term: <input type="number" id="loan_term" value="">
+        </div>
+        <div class="flex-item">
+          Interest Rate: <input type="number" id="interst_rate" value="">
+        </div>
+        <div class="flex-item">
+          2nd Interest Rate: <input type="number" id="interst_rate" value="0">
+        </div>
+        <div class="flex-item">
+          Net Taxes: <input type="number" id="net_taxes" value="">
+        </div>
+        <div class="flex-item">
+          <label for="date_close">Day of Close:</label>
+          <input type="date" id="date_close" name="trip-start" value="">
+        </div>
+        <div class="flex-item">
+          Filling Status:<br/>
+          <input type="radio" id="filling_status_single" name="filling_status" value="single">
+          <label for="filling_status_single">Single</label>
+          <input type="radio" id="filling_status_married" name="filling_status" value="married" checked>
+          <label for="filling_status_married">Married</label>
+        </div>
+        <div class="flex-item">
+          Tax Bracket (%): <input type="number" id="tax_bracket" value="25">
+        </div>
+        <div class="flex-item">
+          Current Interest Paid: <input type="number" id="curr_int" value="">
+        </div>
+        <div class="flex-item">
+          Current Taxes Paid: <input type="number" id="curr_tax" value="">
+        </div>
+        <div class="flex-item">
+          Earnest Deposit: <input type="number" id="earnest" value="">
+        </div>
+        <div class="flex-item">
+          Loan Fee: <input type="number" id="loan_fee" value="">
+        </div>
+        <div class="flex-item">
+          Down Payment Percents: <input type="text" id="down_perc" value="5,10,15,20">
+        </div>
+        <div class="flex-item">
+          Client Name: <input type="text" id="client_name" value="">
         </div>
 
-        <div class="column">
-          Down Payment: <input type="text" id="down_payment" value="">
+      </div>
+
+
+        <div class="flex-item-big">
+        <button type="button" id="run_button">     Run!    </button>
+        <!-- <p id="showresulthere">Result will be shown here</p> -->
+
+	      <!-- <textarea id="text-val" rows="4">This is the content of my file</textarea><br/> -->
+        <!-- <input type="button" id="dwn-btn" value="Download"/> -->
+
+        <button type="button" id='settings-button'> Settings </button>
         </div>
 
-        <input type="text" id="willbeshown" value="">
-        <input type="text" id="willbeshown" value="">
-        <input type="text" id="willbeshown" value="">
-        <input type="text" id="willbeshown" value="">
-        <input type="text" id="willbeshown" value="">
-        <button onclick= "showResult(document.getElementById('willbeshown'))">Ganti1</button>
-        <p id="showresulthere">Result will be shown here</p>
 
-	      <textarea id="text-val" rows="4">This is the content of my file</textarea><br/>
-        <input type="button" id="dwn-btn" value="Download file"/>
+        <div class="main-flex-hidden collapsible">
+          <div class="flex-item">
+            Appraisal Cost: <input type="number" id="appraisal" value="475">
+          </div>
+
+          <div class="flex-item">
+            Credit Report Cost: <input type="number" id="credit_report" value="44.25">
+          </div>
+
+
+        </div>
 
       </form>
 
+      <hr/>
+
+
 </body>
+<script type="text/javascript">
+  document.getElementById("settings-button").addEventListener('click', function(){
+    document.querySelector('.main-flex-hidden.collapsible').classList.toggle("collapsed");
+  });
+</script>
 </html>

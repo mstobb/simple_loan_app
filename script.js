@@ -23,3 +23,31 @@ document.getElementById("dwn-btn").addEventListener("click", function(){
 
     download(filename, text);
 }, false);
+
+
+// var set_btn = document.getElementById("settings_button")
+//
+// set_btn.onclick = function(){
+//   var stuff = document.querySelector('.main-flex.collapsible');
+//   //stuff.classList.toggle("collapsed");
+//   stuff.value="SET"
+// }
+
+
+
+// Collapsible settings menu
+document.getElementById("settings_button").addEventListener("click", function(){
+  document.querySelector('.main-flex.collapsible').value="SET";
+});
+
+const mybutton = document.getElementById('settings-button');
+
+mybutton.addEventListener('click', updateButton);
+
+function updateButton() {
+  if (mybutton.innerText === 'Settings') {
+    mybutton.innerText = 'SET!';
+  } else {
+    mybutton.innerText = 'Settings';
+  }
+}
