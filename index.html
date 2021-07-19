@@ -190,6 +190,8 @@
   });
 
 
+  document.getElementById("run_button").addEventListener('click', create_output);
+
 
 $("input[data-type='currency']").on({
     keyup: function() {
@@ -317,11 +319,40 @@ function create_output() {
  var fha_appraisal = document.getElementById('fha_appraisal').value.replace('$', '').replace(',','')
  var min_fha_down = document.getElementById('min_fha_down').value
  var fha_mip = document.getElementById('fha_mip').value
- var fha_mip_monthly = document.getElementById('fha_min_monthly').value
+ var fha_mip_monthly = document.getElementById('fha_mip_monthly').value
  var pmi_factor = document.getElementById('pmi_factor').value
 
 
-}
+ w = window.open();
+     w.document.write(
+ '<html><head><title>Loan Trac Online</title></head>' +
+ '<style>' +
+ ' #ResultVisualContainer {}' +
+ ' #ResultVisualContainer .Board {' +
+ '   border: 1px solid black;' +
+ '   white-space: nowrap;' +
+ '   font-size: 7pt;' +
+ '   text-align: center;' +
+ '   height: 15px;' +
+ '   padding: 0px;' +
+ '   display: block;' +
+ '   background: #C0C0C0;' +
+ ' }' +
+ ' #ResultVisualContainer .Board .Segment {' +
+ '   margin: 0px;' +
+ '   border-right: 1px solid black;' +
+ '   text-align: center;' +
+ '   height: 15px;' +
+ '   display: inline-block;' +
+ '   background: #FFFFFF;' +
+ ' }' +
+ '</style></head><body>' +
+ '<h1>Loan Trac Online' + '</h1>' + 'STUFFFFF' +
+ '<div style="text-align: center; font-style: italic; margin: 1em;">Generated at https://stobbrealty.com/loantrac</div>' +
+ '<h2>Notes</h2>' +
+ '</body></html>');
+   }
+
 
 </script>
 </html>
