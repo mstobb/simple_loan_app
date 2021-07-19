@@ -30,24 +30,27 @@
           <input type="radio" id="loan_type_fha" name="loan_type" value="fha">
           <label for="loan_type_fha">FHA</label>
         </div>
-        <div class="flex-item">
-          Home Price: <input type="number" id="home_price" value="">
+        <div class="flex-item user">
+          Home Price: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="home_price" value="$150,000.00">
+        </div>
+        <div class="flex-item user">
+          Loan Term: <input type="number" placeholder="Years" id="loan_term" value="30">
+        </div>
+        <div class="flex-item user">
+          Interest Rate: <input type="number" placeholder="2.0%" id="interest_rate" value="2.9">
         </div>
         <div class="flex-item">
-          Loan Term: <input type="number" id="loan_term" value="">
+          2nd Interest Rate: <input type="number" placeholder="2.0%" id="interest_rate2" value="0">
         </div>
         <div class="flex-item">
-          Interest Rate: <input type="number" id="interst_rate" value="">
+          2nd Interest Rate Split (%): <input type="number" id="interest_rate_split" value="0">
         </div>
-        <div class="flex-item">
-          2nd Interest Rate: <input type="number" id="interst_rate" value="0">
+        <div class="flex-item user">
+          Net Taxes: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="net_taxes" value="$4,000.00">
         </div>
-        <div class="flex-item">
-          Net Taxes: <input type="number" id="net_taxes" value="">
-        </div>
-        <div class="flex-item">
+        <div class="flex-item user">
           <label for="date_close">Day of Close:</label>
-          <input type="date" id="date_close" name="trip-start" value="">
+          <input type="date" id="date_close" value="2021-07-14">
         </div>
         <div class="flex-item">
           Filling Status:<br/>
@@ -57,48 +60,116 @@
           <label for="filling_status_married">Married</label>
         </div>
         <div class="flex-item">
-          Tax Bracket (%): <input type="number" id="tax_bracket" value="25">
+          Tax Bracket (%): <input type="number" placeholder="25%" id="tax_bracket" value="25">
         </div>
-        <div class="flex-item">
-          Current Interest Paid: <input type="number" id="curr_int" value="">
+        <div class="flex-item user">
+          Current Interest Paid: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="curr_int" value="$150.00">
         </div>
-        <div class="flex-item">
-          Current Taxes Paid: <input type="number" id="curr_tax" value="">
+        <div class="flex-item user">
+          Current Taxes Paid: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="curr_tax" value="$2,546.00">
         </div>
-        <div class="flex-item">
-          Earnest Deposit: <input type="number" id="earnest" value="">
+        <div class="flex-item user">
+          Earnest Deposit: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="earnest" value="$1,000.00">
         </div>
-        <div class="flex-item">
-          Loan Fee: <input type="number" id="loan_fee" value="">
+        <div class="flex-item user">
+          Loan Fee: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="loan_fee" value="$90.00">
         </div>
         <div class="flex-item">
           Down Payment Percents: <input type="text" id="down_perc" value="5,10,15,20">
         </div>
-        <div class="flex-item">
-          Client Name: <input type="text" id="client_name" value="">
+        <div class="flex-item user">
+          Client Name: <input type="text" id="client_name" value="John Smith">
         </div>
 
       </div>
 
 
         <div class="flex-item-big">
-        <button type="button" id="run_button">     Run!    </button>
+        <button type="button" id="run_button"> Run </button>
+        <button type="button" id='settings-button'> Settings </button>
+
         <!-- <p id="showresulthere">Result will be shown here</p> -->
 
 	      <!-- <textarea id="text-val" rows="4">This is the content of my file</textarea><br/> -->
         <!-- <input type="button" id="dwn-btn" value="Download"/> -->
-
-        <button type="button" id='settings-button'> Settings </button>
         </div>
 
 
         <div class="main-flex-hidden collapsible">
           <div class="flex-item">
-            Appraisal Cost: <input type="number" id="appraisal" value="475">
+            Appraisal Cost: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="appraisal" value="$475.00">
           </div>
 
           <div class="flex-item">
-            Credit Report Cost: <input type="number" id="credit_report" value="44.25">
+            Credit Report Cost: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="credit_report" value="$44.25">
+          </div>
+
+          <div class="flex-item">
+            Flood Search Cost: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="flood_search" value="$12.50">
+          </div>
+
+          <div class="flex-item">
+            Abstract Search Cost: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="abstract_search" value="$260.00">
+          </div>
+
+          <div class="flex-item">
+            Title Examination Cost: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="title_exam" value="$175.00">
+          </div>
+
+          <div class="flex-item">
+            Recording Fee: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="record_fee" value="$110.00">
+          </div>
+
+          <div class="flex-item">
+            Underwriting Fee: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="underwriting_fee" value="$200.00">
+          </div>
+
+          <div class="flex-item">
+            Title Guarantee Fee: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="title_guarn" value="$125.00">
+          </div>
+
+          <div class="flex-item">
+            Loan Origination Fee (%): <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="loan_orig" value="0.00">
+          </div>
+
+          <div class="flex-item">
+            Single Std Deduction: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="single_std_deduct" value="$12,000.00">
+          </div>
+
+          <div class="flex-item">
+            Married Std Deduction: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="married_std_deduct" value="$24,000.00">
+          </div>
+
+          <div class="flex-item">
+            Insurance Cost (/$1000): <input type="number" placeholder="%" id="ins_per_thou" value="4.25">
+          </div>
+
+          <div class="flex-item">
+            Closing/Settlement Fee: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="closing_fee" value="$250.00">
+          </div>
+
+          <div class="flex-item">
+            Escrow Services of Iowa: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="escrow_iowa" value="$195.00">
+          </div>
+
+          <div class="flex-item">
+            FHA Appraisal: <input type="text" placeholder="$" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="currency" id="fha_appraisal" value="$475.00">
+          </div>
+
+          <div class="flex-item">
+            Minimum FHA Down (%): <input type="number" id="min_fha_down" value="3.50">
+          </div>
+
+          <div class="flex-item">
+            FHA MIP amount (%): <input type="number" id="fha_mip" value="1.00">
+          </div>
+
+          <div class="flex-item">
+            FHA MIP monthly (%): <input type="number" id="fha_mip_monthly" value="0.85">
+          </div>
+
+          <div class="flex-item">
+            Monthly PMI factor (%): <input type="text" id="pmi_factor" value="0.44,0.29,0.19">
           </div>
 
 
@@ -110,9 +181,147 @@
 
 
 </body>
-<script type="text/javascript">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
   document.getElementById("settings-button").addEventListener('click', function(){
     document.querySelector('.main-flex-hidden.collapsible').classList.toggle("collapsed");
   });
+
+
+
+$("input[data-type='currency']").on({
+    keyup: function() {
+      formatCurrency($(this));
+    },
+    blur: function() {
+      formatCurrency($(this), "blur");
+    }
+});
+
+
+function formatNumber(n) {
+  // format number 1000000 to 1,234,567
+  return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+}
+
+
+function formatCurrency(input, blur) {
+  // appends $ to value, validates decimal side
+  // and puts cursor back in right position.
+
+  // get input value
+  var input_val = input.val();
+
+  // don't validate empty input
+  if (input_val === "") { return; }
+
+  // original length
+  var original_len = input_val.length;
+
+  // initial caret position
+  var caret_pos = input.prop("selectionStart");
+
+  // check for decimal
+  if (input_val.indexOf(".") >= 0) {
+
+    // get position of first decimal
+    // this prevents multiple decimals from
+    // being entered
+    var decimal_pos = input_val.indexOf(".");
+
+    // split number by decimal point
+    var left_side = input_val.substring(0, decimal_pos);
+    var right_side = input_val.substring(decimal_pos);
+
+    // add commas to left side of number
+    left_side = formatNumber(left_side);
+
+    // validate right side
+    right_side = formatNumber(right_side);
+
+    // On blur make sure 2 numbers after decimal
+    if (blur === "blur") {
+      right_side += "00";
+    }
+
+    // Limit decimal to only 2 digits
+    right_side = right_side.substring(0, 2);
+
+    // join number by .
+    input_val = "$" + left_side + "." + right_side;
+
+  } else {
+    // no decimal entered
+    // add commas to number
+    // remove all non-digits
+    input_val = formatNumber(input_val);
+    input_val = "$" + input_val;
+
+    // final formatting
+    if (blur === "blur") {
+      input_val += ".00";
+    }
+  }
+
+  // send updated string to input
+  input.val(input_val);
+
+  // put caret back in the right position
+  var updated_len = input_val.length;
+  caret_pos = updated_len - original_len + caret_pos;
+  input[0].setSelectionRange(caret_pos, caret_pos);
+}
+
+
+// Function for processing input
+function create_output() {
+
+// Main user defined values
+ var loan_type_conv = document.getElementById('loan_type_conv').checked
+ var loan_type_fha = document.getElementById('loan_type_fha').checked
+ var home_price = document.getElementById('home_price').value.replace('$', '').replace(',','')
+ var loan_term = document.getElementById('loan_term').value
+ var interest_rate = document.getElementById('interest_rate').value
+ var interest_rate2 = document.getElementById('interest_rate2').value
+ var interest_rate_split = document.getElementById('interest_rate_split').value
+ var net_taxes = document.getElementById('net_taxes').value.replace('$', '').replace(',','')
+ var date_close = document.getElementById('date_close').value
+ var filling_single = document.getElementById('filling_status_single').checked
+ var filling_married = document.getElementById('filling_status_married').checked
+ var tax_bracket = document.getElementById('tax_bracket').value
+ var curr_int = document.getElementById('curr_int').value.replace('$', '').replace(',','')
+ var curr_tax = document.getElementById('curr_tax').value.replace('$', '').replace(',','')
+ var earnest = document.getElementById('earnest').value.replace('$', '').replace(',','')
+ var net_taxes = document.getElementById('net_taxes').value.replace('$', '').replace(',','')
+ var loan_fee = document.getElementById('loan_fee').value.replace('$', '').replace(',','')
+ var down_perc = document.getElementById('net_taxes').value
+ var client_name = document.getElementById('client_name').value
+
+// Generic Settings
+ var appraisal = document.getElementById('appraisal').value.replace('$', '').replace(',','')
+ var credit_report = document.getElementById('credit_report').value.replace('$', '').replace(',','')
+ var flood_search = document.getElementById('flood_search').value.replace('$', '').replace(',','')
+ var abstract_search = document.getElementById('abstract_search').value.replace('$', '').replace(',','')
+ var title_exam = document.getElementById('title_exam').value.replace('$', '').replace(',','')
+ var record_fee = document.getElementById('record_fee').value.replace('$', '').replace(',','')
+ var underwriting_fee = document.getElementById('underwriting_fee').value.replace('$', '').replace(',','')
+ var title_guarn = document.getElementById('title_guarn').value.replace('$', '').replace(',','')
+ var loan_orig = document.getElementById('loan_orig').value.replace('$', '').replace(',','')
+ var single_std_deduct = document.getElementById('single_std_deduct').value.replace('$', '').replace(',','')
+ var married_std_deduct = document.getElementById('married_std_deduct').value.replace('$', '').replace(',','')
+ var ins_per_thou = document.getElementById('ins_per_thou').value
+ var closing_fee = document.getElementById('closing_fee').value.replace('$', '').replace(',','')
+ var escrow_iowa = document.getElementById('escrow_iowa').value.replace('$', '').replace(',','')
+ var fha_appraisal = document.getElementById('fha_appraisal').value.replace('$', '').replace(',','')
+ var min_fha_down = document.getElementById('min_fha_down').value
+ var fha_mip = document.getElementById('fha_mip').value
+ var fha_mip_monthly = document.getElementById('fha_min_monthly').value
+ var pmi_factor = document.getElementById('pmi_factor').value
+
+
+}
+
 </script>
 </html>

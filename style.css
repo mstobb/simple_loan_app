@@ -10,6 +10,7 @@ input {
 button {
 	border-radius: 20px;
 	padding: 10px;
+  width: 100px;
 }
 
 a {
@@ -112,7 +113,7 @@ form {
 
 .flex-item-big {
   padding: 5px;
-  width: 300px;
+  width: 400px;
   height: 100px;
   margin: auto;
   margin-top:15px;
