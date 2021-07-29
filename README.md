@@ -1,4 +1,4 @@
-# simple_loan_app
+# Loan Trac Online
 A simple web app for home loans.
 
 User beware: This app has not be rigoursly tested, so it may fail with strange inputs.
